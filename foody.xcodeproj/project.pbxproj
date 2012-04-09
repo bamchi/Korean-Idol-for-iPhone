@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		504827461532D3040008826A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504827451532D3040008826A /* UIKit.framework */; };
+		504827481532D3040008826A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504827471532D3040008826A /* Foundation.framework */; };
+		5048274A1532D3040008826A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504827491532D3040008826A /* CoreGraphics.framework */; };
+		504827501532D3040008826A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5048274E1532D3040008826A /* InfoPlist.strings */; };
+		504827521532D3040008826A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 504827511532D3040008826A /* main.m */; };
+		504827561532D3040008826A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 504827551532D3040008826A /* AppDelegate.m */; };
+		504827591532D3040008826A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504827581532D3040008826A /* ViewController.m */; };
+		5048275C1532D3040008826A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5048275A1532D3040008826A /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		504827411532D3040008826A /* foody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foody.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		504827451532D3040008826A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		504827471532D3040008826A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		504827491532D3040008826A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5048274D1532D3040008826A /* foody-Info.plist */ = {isa = PBXFileReference; path = "foody-Info.plist"; sourceTree = "<group>"; };
+		5048274F1532D3040008826A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		504827511532D3040008826A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		504827531532D3040008826A /* foody-Prefix.pch */ = {isa = PBXFileReference; path = "foody-Prefix.pch"; sourceTree = "<group>"; };
+		504827541532D3040008826A /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		504827551532D3040008826A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		504827571532D3040008826A /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		504827581532D3040008826A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5048275B1532D3040008826A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5048273E1532D3040008826A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				504827461532D3040008826A /* UIKit.framework in Frameworks */,
+				504827481532D3040008826A /* Foundation.framework in Frameworks */,
+				5048274A1532D3040008826A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		504827361532D3040008826A = {
+			isa = PBXGroup;
+			children = (
+				5048274B1532D3040008826A /* foody */,
+				504827441532D3040008826A /* Frameworks */,
+				504827421532D3040008826A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		504827421532D3040008826A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				504827411532D3040008826A /* foody.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		504827441532D3040008826A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				504827451532D3040008826A /* UIKit.framework */,
+				504827471532D3040008826A /* Foundation.framework */,
+				504827491532D3040008826A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5048274B1532D3040008826A /* foody */ = {
+			isa = PBXGroup;
+			children = (
+				504827541532D3040008826A /* AppDelegate.h */,
+				504827551532D3040008826A /* AppDelegate.m */,
+				504827571532D3040008826A /* ViewController.h */,
+				504827581532D3040008826A /* ViewController.m */,
+				5048275A1532D3040008826A /* ViewController.xib */,
+				5048274C1532D3040008826A /* Supporting Files */,
+			);
+			path = foody;
+			sourceTree = "<group>";
+		};
+		5048274C1532D3040008826A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5048274D1532D3040008826A /* foody-Info.plist */,
+				5048274E1532D3040008826A /* InfoPlist.strings */,
+				504827511532D3040008826A /* main.m */,
+				504827531532D3040008826A /* foody-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		504827401532D3040008826A /* foody */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5048275F1532D3040008826A /* Build configuration list for PBXNativeTarget "foody" */;
+			buildPhases = (
+				5048273D1532D3040008826A /* Sources */,
+				5048273E1532D3040008826A /* Frameworks */,
+				5048273F1532D3040008826A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = foody;
+			productName = foody;
+			productReference = 504827411532D3040008826A /* foody.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		504827381532D3040008826A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 5048273B1532D3040008826A /* Build configuration list for PBXProject "foody" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 504827361532D3040008826A;
+			productRefGroup = 504827421532D3040008826A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				504827401532D3040008826A /* foody */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5048273F1532D3040008826A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				504827501532D3040008826A /* InfoPlist.strings in Resources */,
+				5048275C1532D3040008826A /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5048273D1532D3040008826A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				504827521532D3040008826A /* main.m in Sources */,
+				504827561532D3040008826A /* AppDelegate.m in Sources */,
+				504827591532D3040008826A /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5048274E1532D3040008826A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5048274F1532D3040008826A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5048275A1532D3040008826A /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5048275B1532D3040008826A /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5048275D1532D3040008826A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5048275E1532D3040008826A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		504827601532D3040008826A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "foody/foody-Prefix.pch";
+				INFOPLIST_FILE = "foody/foody-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		504827611532D3040008826A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "foody/foody-Prefix.pch";
+				INFOPLIST_FILE = "foody/foody-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5048273B1532D3040008826A /* Build configuration list for PBXProject "foody" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5048275D1532D3040008826A /* Debug */,
+				5048275E1532D3040008826A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5048275F1532D3040008826A /* Build configuration list for PBXNativeTarget "foody" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				504827601532D3040008826A /* Debug */,
+				504827611532D3040008826A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 504827381532D3040008826A /* Project object */;
+}
