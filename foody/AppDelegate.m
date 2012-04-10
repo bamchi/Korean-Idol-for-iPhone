@@ -10,6 +10,8 @@
 
 #import "ViewController.h"
 
+#import "RecipeList.h"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -20,7 +22,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    
+    RecipeList *recipeList = [[RecipeList alloc] init];
+    self.window.rootViewController = recipeList;
+    
+//    self.window.rootViewController = self.viewController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
