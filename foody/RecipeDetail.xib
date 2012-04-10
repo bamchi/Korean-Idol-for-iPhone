@@ -63,7 +63,7 @@
 								<string key="NSFrame">{{20, 61}, {280, 197}}</string>
 								<reference key="NSSuperview" ref="202694778"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="628254523"/>
+								<reference key="NSNextKeyView" ref="1005315979"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -106,7 +106,7 @@
 							<object class="IBUITextView" id="894611623">
 								<reference key="NSNextResponder" ref="202694778"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{33, 310}, {263, 135}}</string>
+								<string key="NSFrame">{{33, 314}, {263, 125}}</string>
 								<reference key="NSSuperview" ref="202694778"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -120,6 +120,13 @@
 								<bool key="IBUIEditable">NO</bool>
 								<object class="NSMutableString" key="IBUIText">
 									<characters key="NS.bytes">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</characters>
+								</object>
+								<object class="NSColor" key="IBUITextColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MC4yNQA</bytes>
+									<object class="NSColorSpace" key="NSCustomColorSpace" id="1034122354">
+										<int key="NSID">2</int>
+									</object>
 								</object>
 								<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 									<int key="IBUIAutocapitalizationType">2</int>
@@ -141,7 +148,7 @@
 								<string key="NSFrame">{{15, 55}, {290, 224}}</string>
 								<reference key="NSSuperview" ref="202694778"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="1005315979"/>
+								<reference key="NSNextKeyView" ref="52304325"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -154,7 +161,7 @@
 						<string key="NSFrameSize">{320, 480}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="52304325"/>
+						<reference key="NSNextKeyView" ref="628254523"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -168,9 +175,7 @@
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
-					<object class="NSColorSpace" key="NSCustomColorSpace">
-						<int key="NSID">2</int>
-					</object>
+					<reference key="NSCustomColorSpace" ref="1034122354"/>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

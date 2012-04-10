@@ -12,7 +12,9 @@
 @interface RecipeList : UITableViewController <myJsonDelegate>
 
 @property (nonatomic, retain) NSMutableArray *recipes;
+@property (nonatomic, assign) int page;
 
 - (void)loadRecipes;
+- (void)processLoadRecipes; // :(NSString *)name;
 
 @end
