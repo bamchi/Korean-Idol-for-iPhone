@@ -8,12 +8,18 @@
 
 #import "RecipeList.h"
 #import "RecipeCell.h"
+#import "RecipeDetail.h"
+//#import "JSON/JSON.h"
+#import "JSON-Url/myJson.h"
+#import "Recipe.h"
 
 @interface RecipeList ()
 
 @end
 
 @implementation RecipeList
+
+@synthesize recipes;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +32,10 @@
 
 - (void)viewDidLoad
 {
+    self.title = @"Dishes";
+    
+    [self loadRecipes];
+    
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -56,7 +66,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [recipes count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 86;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -76,6 +91,9 @@
             }
         }
     }
+    
+    Recipe *recipe = [recipes objectAtIndex:indexPath.row];
+    [cell setDetailsWithRecipe:recipe];
     
     // Configure the cell...
     
@@ -125,13 +143,44 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    RecipeDetail *recipeDetail = [[RecipeDetail alloc] initWithNibName:@"RecipeDetail" bundle:nil];
+    
+    recipeDetail.recipe = [recipes objectAtIndex:indexPath.row];
+    
+    [self.navigationController pushViewController:recipeDetail animated:TRUE];
 }
+
+- (void)loadRecipes
+{
+    NSString *url = @"http://korean-idol.heroku.com/photos.json";
+    
+    Json *myJsonParser = [[Json alloc] init];
+    
+    [myJsonParser startLoadingObjectWithUrl:url andDelegate:self];
+}
+
+-(void)dataRequestCompletedWithJsonObject:(id)jsonObject 
+{
+    NSArray *array = (NSArray*)jsonObject;
+    
+    self.recipes = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *dic in array) {
+        Recipe *recipe = [[Recipe alloc] init];
+        recipe.recipe_id = [[dic objectForKey:@"id"] intValue]; 
+        recipe.name = [dic objectForKey:@"title"];
+        recipe.body = [dic objectForKey:@"body"];
+
+        NSString *filename = [dic objectForKey:@"image_file_name"];
+        recipe.thumbNail = [NSString stringWithFormat:@"http://korean-idol-pro.s3.amazonaws.com/thumb/%d/%@", recipe.recipe_id, filename];
+        recipe.imageUrl = [NSString stringWithFormat:@"http://korean-idol-pro.s3.amazonaws.com/original/%d/%@", recipe.recipe_id, filename];
+        
+        [recipes addObject:recipe];
+    }
+    
+    [self.tableView reloadData];
+    
+}
+
 
 @end

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Recipe.h"
 
 @interface RecipeCell : UITableViewCell
+	
+- (void)setDetailsWithRecipe:(Recipe*)recipe;
+@property (weak, nonatomic) IBOutlet UILabel *dishTitle;
+@property (weak, nonatomic) IBOutlet UIImageView *dishImageView;
+@property (weak, nonatomic) IBOutlet UILabel *twitterShareCount;
 
 @end

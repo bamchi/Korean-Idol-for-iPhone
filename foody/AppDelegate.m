@@ -19,17 +19,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Customize Apperance - bamchi
+    [self customizeAppearance];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     
     RecipeList *recipeList = [[RecipeList alloc] init];
-    self.window.rootViewController = recipeList;
-    
-//    self.window.rootViewController = self.viewController;
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:recipeList];
+    self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)customizeAppearance
+{
+    UIImage *leatherBackground = [UIImage imageNamed:@"navbar.png"];    
+    [[UINavigationBar appearance] setBackgroundImage:leatherBackground forBarMetrics:UIBarMetricsDefault];
+
+    UIImage *backButtonImage = [UIImage imageNamed:@"back-button.png"];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

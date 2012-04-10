@@ -9,6 +9,9 @@
 #import "RecipeCell.h"
 
 @implementation RecipeCell
+@synthesize dishTitle;
+@synthesize dishImageView;
+@synthesize twitterShareCount;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -24,6 +27,27 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setDetailsWithRecipe:(Recipe*)recipe
+{
+    dishTitle.text = recipe.name;
+    
+    twitterShareCount.text = [NSString stringWithFormat:@"%d", 0];
+
+    UIImage *image = nil;
+    
+    if (recipe.imageData) {
+        image = [UIImage imageWithData:recipe.thumbImageData];
+    } else {
+        [recipe loadData];
+        image = [UIImage imageWithData:recipe.thumbImageData];
+    }   
+    
+    if(image) 
+    {
+        dishImageView.image = image;        
+    }
 }
 
 @end

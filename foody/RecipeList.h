@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSON-Url/myJson.h"
 
-@interface RecipeList : UITableViewController
+@interface RecipeList : UITableViewController <myJsonDelegate>
+
+@property (nonatomic, retain) NSMutableArray *recipes;
+
+- (void)loadRecipes;
 
 @end
