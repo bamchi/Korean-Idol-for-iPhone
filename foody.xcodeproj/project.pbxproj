@@ -61,6 +61,9 @@
 		504828111533FCDF0008826A /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 504828081533FCDF0008826A /* SBJsonWriter.m */; };
 		504828121533FCDF0008826A /* myJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5048280B1533FCDF0008826A /* myJson.m */; };
 		504828151533FD220008826A /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 504828141533FD220008826A /* Recipe.m */; };
+		505B476515372990003E328A /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B476415372990003E328A /* AsyncImageView.m */; };
+		505B476915372ECC003E328A /* ready_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 505B476715372ECC003E328A /* ready_image.png */; };
+		505B476A15372ECC003E328A /* ready_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 505B476815372ECC003E328A /* ready_image@2x.png */; };
 		50BAE86F15341AE400AC7268 /* RecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BAE86D15341AE400AC7268 /* RecipeCell.m */; };
 		50BAE87615341FA700AC7268 /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50BAE87515341FA700AC7268 /* RecipeCell.xib */; };
 		50BAE878153445DB00AC7268 /* PullToRefreshCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50BAE877153445DB00AC7268 /* PullToRefreshCell.xib */; };
@@ -138,6 +141,10 @@
 		5048280B1533FCDF0008826A /* myJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myJson.m; sourceTree = "<group>"; };
 		504828131533FD220008826A /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recipe.h; path = foody/Recipe.h; sourceTree = "<group>"; };
 		504828141533FD220008826A /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Recipe.m; path = foody/Recipe.m; sourceTree = "<group>"; };
+		505B476415372990003E328A /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = foody/AsyncImageView.m; sourceTree = "<group>"; };
+		505B4766153729B6003E328A /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = foody/AsyncImageView.h; sourceTree = "<group>"; };
+		505B476715372ECC003E328A /* ready_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ready_image.png; path = foody/ready_image.png; sourceTree = "<group>"; };
+		505B476815372ECC003E328A /* ready_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ready_image@2x.png"; path = "foody/ready_image@2x.png"; sourceTree = "<group>"; };
 		50BAE86C15341AE400AC7268 /* RecipeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecipeCell.h; path = foody/RecipeCell.h; sourceTree = "<group>"; };
 		50BAE86D15341AE400AC7268 /* RecipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipeCell.m; path = foody/RecipeCell.m; sourceTree = "<group>"; };
 		50BAE87515341FA700AC7268 /* RecipeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecipeCell.xib; path = foody/RecipeCell.xib; sourceTree = "<group>"; };
@@ -163,6 +170,10 @@
 		504827361532D3040008826A = {
 			isa = PBXGroup;
 			children = (
+				505B476715372ECC003E328A /* ready_image.png */,
+				505B476815372ECC003E328A /* ready_image@2x.png */,
+				505B4766153729B6003E328A /* AsyncImageView.h */,
+				505B476415372990003E328A /* AsyncImageView.m */,
 				50BAE877153445DB00AC7268 /* PullToRefreshCell.xib */,
 				50BAE8791534468100AC7268 /* PullToRefreshCell.h */,
 				50BAE87A1534468100AC7268 /* PullToRefreshCell.m */,
@@ -391,6 +402,8 @@
 				504827FA1533E19E0008826A /* tabbar@2x.png in Resources */,
 				50BAE87615341FA700AC7268 /* RecipeCell.xib in Resources */,
 				50BAE878153445DB00AC7268 /* PullToRefreshCell.xib in Resources */,
+				505B476915372ECC003E328A /* ready_image.png in Resources */,
+				505B476A15372ECC003E328A /* ready_image@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +429,7 @@
 				504828151533FD220008826A /* Recipe.m in Sources */,
 				50BAE86F15341AE400AC7268 /* RecipeCell.m in Sources */,
 				50BAE87B1534468100AC7268 /* PullToRefreshCell.m in Sources */,
+				505B476515372990003E328A /* AsyncImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,8 +505,11 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "foody/foody-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				INFOPLIST_FILE = "foody/foody-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -502,8 +519,11 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "foody/foody-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "foody/foody-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

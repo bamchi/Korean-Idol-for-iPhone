@@ -45,6 +45,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrameSize">{320, 86}</string>
 								<reference key="NSSuperview" ref="87355364"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="496846717"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -59,6 +60,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{5, 6}, {76, 74}}</string>
 								<reference key="NSSuperview" ref="87355364"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="58236556"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -73,7 +75,8 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{82, 13}, {218, 21}}</string>
 								<reference key="NSSuperview" ref="87355364"/>
-								<reference key="NSNextKeyView" ref="205842922"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="911221066"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -106,16 +109,17 @@
 							</object>
 							<object class="IBUIImageView" id="58236556">
 								<reference key="NSNextResponder" ref="87355364"/>
-								<int key="NSvFlags">292</int>
+								<int key="NSvFlags">274</int>
 								<string key="NSFrame">{{13, 13}, {61, 60}}</string>
 								<reference key="NSSuperview" ref="87355364"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="188721638"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">1.jpeg</string>
+									<string key="NSResourceName">ready_image.png</string>
 								</object>
 							</object>
 							<object class="IBUIImageView" id="911221066">
@@ -123,6 +127,8 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{94, 54}, {61, 19}}</string>
 								<reference key="NSSuperview" ref="87355364"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="205842922"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -136,7 +142,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{103, 52}, {42, 21}}</string>
 								<reference key="NSSuperview" ref="87355364"/>
-								<reference key="NSNextKeyView" ref="911221066"/>
+								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -158,6 +164,7 @@
 						</array>
 						<string key="NSFrameSize">{320, 86}</string>
 						<reference key="NSSuperview" ref="507852723"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="902568608"/>
 						<string key="NSReuseIdentifierKey">_NS:11</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
@@ -173,6 +180,7 @@
 				</array>
 				<string key="NSFrameSize">{320, 87}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="87355364"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -289,7 +297,37 @@
 			<nil key="sourceID"/>
 			<int key="maxID">12</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">RecipeCell</string>
+					<string key="superclassName">UITableViewCell</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="dishImageView">UIImageView</string>
+						<string key="dishTitle">UILabel</string>
+						<string key="twitterShareCount">UILabel</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="dishImageView">
+							<string key="name">dishImageView</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="dishTitle">
+							<string key="name">dishTitle</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="twitterShareCount">
+							<string key="name">twitterShareCount</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/RecipeCell.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
@@ -299,10 +337,10 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="1.jpeg">{600, 400}</string>
 			<string key="country.png">{75, 18}</string>
 			<string key="list-item.png">{320, 96}</string>
 			<string key="list-mask.png">{76, 78}</string>
+			<string key="ready_image.png">{64, 64}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">1181</string>
 	</data>

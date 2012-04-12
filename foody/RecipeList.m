@@ -13,6 +13,7 @@
 #import "JSON-Url/myJson.h"
 #import "Recipe.h"
 #import "PullToRefreshCell.h"
+#import "AsyncImageView.h"
 
 @interface RecipeList ()
 
@@ -112,10 +113,35 @@
           break;
         }
       }
+    } else {
+      AsyncImageView* oldImage = (AsyncImageView*)
+      [cell.contentView viewWithTag:999];
+      [oldImage removeFromSuperview];
     }
     
     Recipe *recipe = [recipes objectAtIndex:indexPath.row];
     [cell setDetailsWithRecipe:recipe];
+    
+    
+    
+    // [S] AsyncImageView
+    
+    CGRect frame;
+    frame.size.width=60; frame.size.height=60;
+    frame.origin.x=13; frame.origin.y=13;
+    AsyncImageView* asyncImage = [[AsyncImageView alloc]initWithFrame:frame];
+    asyncImage.tag = 999;
+//    NSURL* url = [imageDownload thumbnailURLAtIndex:indexPath.row];
+    
+    
+    NSURL *thumbUrl = [NSURL URLWithString:recipe.thumbNail];
+
+    [asyncImage loadImageFromURL:thumbUrl];
+    
+//    [cell.contentView addSubview:asyncImage];
+    
+    [cell addSubview:asyncImage];
+    // [E] AsyncImageView
     
     // Configure the cell...
     
@@ -250,5 +276,18 @@
   [self.tableView reloadData];
 }
 
+// Load images for all onscreen rows when scrolling is finished
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+  if (!decelerate)
+	{
+    [self loadImagesForOnScreenRows];
+  }
+}
 
+- (void)loadImagesForOnScreenRows 
+{
+  NSLog(@"scrollViewDidEndDragging");
+  
+}
 @end

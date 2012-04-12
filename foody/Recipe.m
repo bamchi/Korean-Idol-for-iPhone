@@ -20,13 +20,18 @@
 @synthesize thumbImageData;
 @synthesize imageData;
 
+
 - (void)loadData 
 {
-    NSURL *thumbUrl = [NSURL URLWithString:self.thumbNail];
-    self.thumbImageData = [NSData dataWithContentsOfURL:thumbUrl];
+  // dataWithContentsOfURL는 sync 통신
 
-    NSURL *tempImageUrl = [NSURL URLWithString:self.imageUrl];
-    self.imageData = [NSData dataWithContentsOfURL:tempImageUrl];
+  NSLog(@"Recipe.loadData - 무시");
+  
+//  NSURL *thumbUrl = [NSURL URLWithString:self.thumbNail];
+//  self.thumbImageData = [NSData dataWithContentsOfURL:thumbUrl];
+//  
+  NSURL *tempImageUrl = [NSURL URLWithString:self.imageUrl];
+  self.imageData = [NSData dataWithContentsOfURL:tempImageUrl];
 }
 
 @end

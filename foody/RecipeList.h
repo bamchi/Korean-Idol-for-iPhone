@@ -15,6 +15,7 @@
 @property (nonatomic, assign) int page;
 
 - (void)loadRecipes;
-- (void)processLoadRecipes; // :(NSString *)name;
+- (void)processLoadRecipes; //:(NSString *)name;
 
+- (void)loadImagesForOnScreenRows;
 @end
